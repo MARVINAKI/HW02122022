@@ -1,11 +1,10 @@
+import Other.MyException.WrongLoginException;
+import Other.MyException.WrongPasswordException;
 import Transport.Car;
-import Transport.Transport;
 import Other.User;
 
-import java.util.ArrayList;
-
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongLoginException, WrongPasswordException {
         Car.CarType passengerCar = new Car.CarType("Легковой автомобиль");
         Car.CarType truck = new Car.CarType("Грузовой автомобиль");
         Car.CarType bus = new Car.CarType("Автобус");
@@ -33,7 +32,7 @@ public class Main {
         Car volvoBus = new Car("Volvo", "9500", 7.7);
         volvoBus.setCarType(bus, Car.PassCapacity.BIG);
         Car hyundai = new Car("Hyundai", "Universe", 12.3);
-        hyundai.setCarType(bus,120);
+        hyundai.setCarType(bus, 120);
 
 
         Driver.DriversLicense categoryB = new Driver.DriversLicense("B");
@@ -49,6 +48,8 @@ public class Main {
         Driver kvyat = new Driver("Daniil Kvyat", "yEs", 15);
         kvyat.setDriversLicense(categoryB);
 
-        hyundai.printType();
+        User user1 = new User("us1_ss","1111111111111111111111111111111111111111111111111111111111"," 1");
+        System.out.println(user1.checkLogin());
+        System.out.println(user1.checkPassword());
     }
 }
