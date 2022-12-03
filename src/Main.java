@@ -48,8 +48,10 @@ public class Main {
         Driver kvyat = new Driver("Daniil Kvyat", "yEs", 15);
         kvyat.setDriversLicense(categoryB);
 
-        User user1 = new User("us1_ss","1111111111111111111111111111111111111111111111111111111111"," 1");
-        System.out.println(user1.checkLogin());
-        System.out.println(user1.checkPassword());
+
+
+
+        User user1 = new User("us1_ss", "11111111", " 1");
+
     }
 }

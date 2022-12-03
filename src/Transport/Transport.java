@@ -1,5 +1,6 @@
 package Transport;
 
+import java.sql.Driver;
 import java.util.Objects;
 
 public abstract class Transport {
@@ -14,6 +15,8 @@ public abstract class Transport {
     }
 
     public abstract void printType();
+
+    public abstract void getDiagnosed();
 
     public void startMoving() {
         System.out.println(getBrand() + " " + getModel() + " начинает движение");

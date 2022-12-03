@@ -19,6 +19,13 @@ public class Car<A extends Driver> extends Transport implements Competing {
                 passCapacity);
     }
 
+    @Override
+    public void getDiagnosed() {
+        if (getCarType().checkBus()) {
+            System.out.println("Автобус " + getBrand() + " в диагностике не требуется");
+        }
+    }
+
     public enum BodyTypePass {
         SEDAN("Седан"),
         HATCHBACK("Хетчбек"),
@@ -164,6 +171,7 @@ public class Car<A extends Driver> extends Transport implements Competing {
         }
     }
 
+
     @Override
     public void pitStop() {
         if (carType.checkPassCar()) {
@@ -189,6 +197,7 @@ public class Car<A extends Driver> extends Transport implements Competing {
     public void maxSpeed() {
         System.out.println("Не фиксировалось");
     }
+
 
     public final CarType getCarType() {
         return carType;
