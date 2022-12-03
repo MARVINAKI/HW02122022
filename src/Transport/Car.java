@@ -23,6 +23,8 @@ public class Car<A extends Driver> extends Transport implements Competing {
     public void getDiagnosed() {
         if (getCarType().checkBus()) {
             System.out.println("Автобус " + getBrand() + " в диагностике не требуется");
+        } else {
+            //Диагностика авто легковых и грузовых
         }
     }
 
